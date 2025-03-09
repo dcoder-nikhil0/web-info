@@ -1,0 +1,118 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centering the container */
+.container {
+    width: 50%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Form input and buttons */
+input {
+    width: 80%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Buttons styling */
+button {
+    width: 85%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+/* Analyze Button */
+button[type="submit"] {
+    background: rgba(255, 165, 0, 0.8);
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 165, 0, 0.4);
+}
+
+button[type="submit"]:hover {
+    background: rgba(255, 140, 0, 0.9);
+    transform: scale(1.05);
+}
+
+/* Reset Button */
+button#resetButton {
+    background: rgba(255, 69, 58, 0.8);
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 69, 58, 0.4);
+}
+
+button#resetButton:hover {
+    background: rgba(200, 40, 40, 0.9);
+    transform: scale(1.05);
+}
+
+/* Performance results */
+h2 {
+    margin-top: 20px;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Suggestions list */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 6px;
+    margin: 8px 0;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+ul li:hover {
+    background: rgba(255, 255, 255, 0.4);
+}

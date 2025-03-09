@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Optimizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Website Performance Optimizer</h1>
+        <form method="post" id="optimizerForm">
+            <input type="text" name="url" id="urlInput" placeholder="Enter website URL" required>
+            <button type="submit">Analyze</button>
+            <button type="button" id="resetButton">Reset</button>
+        </form>
+
+        {% if performance_data %}
+            <div id="resultContainer">
+                <h2>Results for {{ performance_data.url }}</h2>
+                <p><strong>Load Time:</strong> {{ performance_data.load_time }} sec</p>
+
+                <h3>Optimization Suggestions:</h3>
+                <ul>
+                    {% for tip in tips %}
+                        <li>{{ tip }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
